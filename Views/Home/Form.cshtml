@@ -1,0 +1,42 @@
+﻿@model lab3formularz.Models.Dane
+
+<form asp-action="Form" method="post">
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="Imie">Twoje imie</label>
+        <input asp-for="Imie" />
+    </div>
+    <div>
+        <label asp-for="Nazwisko">Nazwisko</label>
+        <input asp-for="Nazwisko" />
+    </div>
+    <div>
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label asp-for="Haslo">Podaj Haslo</label>
+        <input asp-for="Haslo" />
+    </div>
+    <div>
+        <label asp-for="PotwierdzHaslo">Potwierdz haslo</label>
+        <input asp-for="PotwierdzHaslo" />
+    </div>
+    <div>
+        <label asp-for="NrTelefonu">Nr telefonu</label>
+        <input asp-for="NrTelefonu" />
+    </div>
+    <div>
+        <label asp-for="Wiek">Wiek</label>
+        <input asp-for="Wiek" />
+    </div>
+    <div>
+        <label asp-for="Miasto">Miasto</label>
+        <select asp-for="Miasto"
+                asp-items="Html.GetEnumSelectList<Dane.Kategorie>()">
+        </select>
+    </div>  
+    <div>
+        <input type="submit" />
+    </div>
+</form>
